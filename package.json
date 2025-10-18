@@ -21,7 +21,10 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "who": "npx clasp show-authorized-user",
+    "list-projects": "npx clasp list-scripts --noShorten | sed '1d' | awk -F' - ' '{print $1}' | sort -d",
+    "push": "npx clasp push --force",
+    "watch": "npx clasp push --force --watch"
   },
   "devDependencies": {
     "@google/clasp": "^3.1.0",
